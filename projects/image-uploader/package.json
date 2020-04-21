@@ -1,11 +1,7 @@
 {
-  "name": "ngx-image-uploader",
-  "version": "6.0.0-beta.1",
-  "scripts": {
-    "prepublish": "ng build image-uploader --prod",
-    "publish": "npm publish ../../dist/image-uploader"
-  },
-  "description": "Angular2 asynchronous image uploader with preview",
+  "name": "ngx-image-uploader-next",
+  "version": "1.0.1",
+  "description": "Angular asynchronous image uploader with preview. Fork of ngx-image-uploader-next.",
   "keywords": [
     "angular",
     "ngx",
@@ -13,11 +9,11 @@
     "image",
     "uploader"
   ],
-  "author": "Olegas Gončarovas <ogix777@gmail.com>",
+  "author": "Alexey Vladimirov newvladimirov@gmail.com",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+    "@angular/common": "^8.0.0-rc.0 || ^10.0.0",
+    "@angular/core": "^8.0.0-rc.0 || ^10.0.0"
   },
   "dependencies": {
     "cropperjs": "^1.4.0"

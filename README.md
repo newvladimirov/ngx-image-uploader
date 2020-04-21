@@ -1,13 +1,18 @@
-# Angular image uploader [![npm version](https://badge.fury.io/js/ngx-image-uploader.svg)](https://badge.fury.io/js/ngx-image-uploader) ![Dependencies](https://david-dm.org/ogix/ngx-image-uploader.svg)
+# Angular image-uploader-next
+[![npm version](https://badge.fury.io/js/ngx-image-uploader-next.svg)](https://badge.fury.io/js/ngx-image-uploader) 
+![Dependencies](https://david-dm.org/ogix/ngx-image-uploader-next.svg)
 
-Angular image upload component with preview and cropping features
+This is a fork of [ngx-image-updoader](https://www.npmjs.com/package/ngx-image-uploader).
+Now supports Angular 9.
+
+Angular image upload component with a preview and cropping features.
 
 ### Demo
 See demo here: [demo](https://stackblitz.com/github/ogix/ngx-image-uploader)
 
 ### Install
 ```
-npm install ngx-image-uploader --save
+npm install ngx-image-uploader-next --save
 ```
 ### Usage
 
@@ -55,5 +60,7 @@ export class AppComponent {
 ```
 
 ### License
+
+[MIT](https://tldrlegal.com/license/mit-license) © 2020 [Alexey Vladimirov](https://github.com/newvladimirov)
 
 [MIT](https://tldrlegal.com/license/mit-license) © [Olegas Gončarovas](https://github.com/ogix)
