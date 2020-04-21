@@ -373,7 +373,10 @@ export class ImageUploaderComponent implements OnInit, OnDestroy, AfterViewCheck
     return new Promise((resolve) => {
       const reader = new FileReader();
       reader.onload = function (e) {
-        result.dataURL = reader.result;
+        result.dataURL = reader.result instanceof ArrayBuffer
+            ? new TextDecoder('utf-8').decode(reader.result)
+            : reader.result;
+        
         resolve(result);
       };
       reader.readAsDataURL(file);
