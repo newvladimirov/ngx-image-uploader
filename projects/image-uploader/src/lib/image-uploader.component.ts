@@ -1,7 +1,4 @@
-import {
-  Component, OnInit, OnDestroy, AfterViewChecked, ViewChild, ElementRef,
-  Renderer, Input, Output, EventEmitter, ChangeDetectorRef, forwardRef, HostListener
-} from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewChecked, ViewChild, ElementRef, Input, Output, EventEmitter, ChangeDetectorRef, forwardRef, HostListener, Renderer2 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import Cropper from 'cropperjs';
 
@@ -50,7 +47,7 @@ export class ImageUploaderComponent implements OnInit, OnDestroy, AfterViewCheck
   cropper: Cropper = undefined;
   fileToUpload: File;
 
-  @ViewChild('imageElement', { static: false }) imageElement: ElementRef;
+  @ViewChild('imageElement') imageElement: ElementRef;
   @ViewChild('fileInput', { static: true }) fileInputElement: ElementRef;
   @ViewChild('dragOverlay', { static: true }) dragOverlayElement: ElementRef;
   @Input() options: ImageUploaderOptions;
@@ -60,7 +57,7 @@ export class ImageUploaderComponent implements OnInit, OnDestroy, AfterViewCheck
   propagateChange = (_: any) => {};
 
   constructor(
-    private renderer: Renderer,
+    private renderer: Renderer2,
     private uploader: ImageUploaderService,
     private changeDetector: ChangeDetectorRef) { }
 
@@ -189,7 +186,7 @@ export class ImageUploaderComponent implements OnInit, OnDestroy, AfterViewCheck
   }
 
   onImageClicked() {
-    this.renderer.invokeElementMethod(this.fileInputElement.nativeElement, 'click');
+    this.fileInputElement.nativeElement.click();
   }
 
   onFileChanged() {
