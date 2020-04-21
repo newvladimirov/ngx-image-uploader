@@ -50,9 +50,9 @@ export class ImageUploaderComponent implements OnInit, OnDestroy, AfterViewCheck
   cropper: Cropper = undefined;
   fileToUpload: File;
 
-  @ViewChild('imageElement') imageElement: ElementRef;
-  @ViewChild('fileInput') fileInputElement: ElementRef;
-  @ViewChild('dragOverlay') dragOverlayElement: ElementRef;
+  @ViewChild('imageElement', { static: false }) imageElement: ElementRef;
+  @ViewChild('fileInput', { static: true }) fileInputElement: ElementRef;
+  @ViewChild('dragOverlay', { static: true }) dragOverlayElement: ElementRef;
   @Input() options: ImageUploaderOptions;
   @Output() upload: EventEmitter<FileQueueObject> = new EventEmitter<FileQueueObject>();
   @Output() statusChange: EventEmitter<Status> = new EventEmitter<Status>();
