@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ImageUploaderOptions } from 'ngx-image-uploader';
+import { ImageUploaderOptions } from '../../projects/image-uploader/src/lib/interfaces';
 
 @Component({
   selector: 'app-root',
