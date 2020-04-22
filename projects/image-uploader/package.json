@@ -1,6 +1,6 @@
 {
   "name": "ngx-image-uploader-next",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Angular asynchronous image uploader with preview. Fork of ngx-image-uploader-next.",
   "keywords": [
     "angular",
