@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ImageUploaderModule } from '../../projects/image-uploader/src/lib/image-uploader.module';
+import { ImageUploaderModule } from 'ngx-image-uploader-next';
 
 import { AppComponent } from './app.component';
 

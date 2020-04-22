@@ -20,10 +20,10 @@
       "dom"
     ],
     "paths": {
-      "ngx-image-uploader": [
+      "ngx-image-uploader-next": [
         "dist/image-uploader"
       ],
-      "ngx-image-uploader/*": [
+      "ngx-image-uploader-next/*": [
         "dist/image-uploader/*"
       ]
     }
