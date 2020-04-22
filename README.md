@@ -1,5 +1,5 @@
 # Angular image-uploader-next
-[![npm version](https://badge.fury.io/js/ngx-image-uploader-next.svg)](https://badge.fury.io/js/ngx-image-uploader) 
+[![npm version](https://badge.fury.io/js/ngx-image-uploader-next.svg)](https://badge.fury.io/js/ngx-image-uploader-next) 
 ![Dependencies](https://david-dm.org/ogix/ngx-image-uploader-next.svg)
 
 This is a fork of [ngx-image-updoader](https://www.npmjs.com/package/ngx-image-uploader).
