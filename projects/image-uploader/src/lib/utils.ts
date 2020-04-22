@@ -1,4 +1,4 @@
-import {ResizeOptions} from './interfaces';
+import { ResizeOptions } from './interfaces';
 
 export function createImage(url: string, cb: (i: HTMLImageElement) => void) {
   const image = new Image();

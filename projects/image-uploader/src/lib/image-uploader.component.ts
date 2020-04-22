@@ -1,11 +1,14 @@
-import { Component, OnInit, OnDestroy, AfterViewChecked, ViewChild, ElementRef, Input, Output, EventEmitter, ChangeDetectorRef, forwardRef, HostListener, Renderer2 } from '@angular/core';
+import {
+  AfterViewChecked, ChangeDetectorRef, Component, ElementRef, EventEmitter, forwardRef, HostListener, Input, OnDestroy,
+  OnInit, Output, Renderer2, ViewChild
+} from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import Cropper from 'cropperjs';
+import { FileQueueObject } from './file-queue-object';
 
 import { ImageUploaderService } from './image-uploader.service';
-import { ImageUploaderOptions, ImageResult, ResizeOptions, CropOptions } from './interfaces';
+import { CropOptions, ImageResult, ImageUploaderOptions, ResizeOptions } from './interfaces';
 import { createImage, resizeImage } from './utils';
-import { FileQueueObject } from './file-queue-object';
 
 export enum Status {
   NotSelected,

@@ -1,4 +1,4 @@
-import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
+import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 
 import { FileQueueStatus } from './file-queue-status';

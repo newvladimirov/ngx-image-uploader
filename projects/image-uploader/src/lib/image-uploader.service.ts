@@ -1,10 +1,12 @@
-import { Observer, Observable } from 'rxjs';
+import {
+    HttpClient, HttpErrorResponse, HttpEventType, HttpHeaders, HttpRequest, HttpResponse
+} from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpRequest, HttpEventType, HttpResponse, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { Observable, Observer } from 'rxjs';
 
 import { FileQueueObject } from './file-queue-object';
 import { FileQueueStatus } from './file-queue-status';
-import { FileUploaderOptions, CropOptions } from './interfaces';
+import { CropOptions, FileUploaderOptions } from './interfaces';
 
 @Injectable({
   providedIn: 'root'
