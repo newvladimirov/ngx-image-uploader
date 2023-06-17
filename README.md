@@ -1,27 +1,66 @@
-# NgxImageUploader
+# Angular image-uploader-next
+[![npm version](https://badge.fury.io/js/ngx-image-uploader-next.svg)](https://badge.fury.io/js/ngx-image-uploader-next) 
+![Dependencies](https://david-dm.org/ogix/ngx-image-uploader-next.svg)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+This is a fork of [ngx-image-updoader](https://www.npmjs.com/package/ngx-image-uploader).
+Now supports Angular 16.
 
-## Development server
+Angular image upload component with a preview and cropping features.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Demo
+See demo here: [demo](https://stackblitz.com/github/ogix/ngx-image-uploader)
 
-## Code scaffolding
+### Install
+```
+npm install ngx-image-uploader-next --save
+```
+### Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Add image uploader module to your module's ```imports```
 
-## Build
+```js
+import { NgModule } from '@angular/core';
+import { BrowserModule  } from '@angular/platform-browser';
+import { AppComponent } from './app';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+import { ImageUploaderModule } from 'ngx-image-uploader-next';
 
-## Running unit tests
+@NgModule({
+  imports: [BrowserModule, ImageUploaderModule],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Use it in your component
 
-## Running end-to-end tests
+```js
+import { Component } from '@angular/core';
+import { ImageUploaderOptions, FileQueueObject } from 'ngx-image-uploader';
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+@Component({
+  selector: 'example-app',
+  template: '<ngx-image-uploader [options]="options" (upload)="onUpload($event)"></ngx-image-uploader>'
+})
+export class AppComponent {
+  options: ImageUploaderOptions = {
+      thumbnailHeight: 150,
+      thumbnailWidth: 150,
+      uploadUrl: 'http://some-server.com/upload',
+      allowedImageTypes: ['image/png', 'image/jpeg'],
+      maxImageSize: 3
+  };
+  
+  onUpload(file: FileQueueObject) {
+    console.log(file.response);
+  }
+}
 
-## Further help
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### License
+
+[MIT](https://tldrlegal.com/license/mit-license) © 2020 [Alexey Vladimirov](https://github.com/newvladimirov)
+
+[MIT](https://tldrlegal.com/license/mit-license) © [Olegas Gončarovas](https://github.com/ogix)
