@@ -1,6 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ImageUploaderModule } from 'ngx-image-uploader-next';
+import { BrowserModule } from '@angular/platform-browser';
+import { ImageUploaderModule } from 'projects/ngx-image-uploader-next/src/lib/image-uploader.module';
 
 import { AppComponent } from './app.component';
 
@@ -8,10 +8,10 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
-    ImageUploaderModule
-  ],
+    imports: [
+        BrowserModule,
+        ImageUploaderModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
