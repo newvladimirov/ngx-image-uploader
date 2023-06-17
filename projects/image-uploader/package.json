@@ -13,8 +13,8 @@
   "author": "Alexey Vladimirov newvladimirov@gmail.com",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^8.0.0-rc.0 || ^10.0.0",
-    "@angular/core": "^8.0.0-rc.0 || ^10.0.0"
+    "@angular/common": "^12.0.0",
+    "@angular/core": "^12.0.0"
   },
   "dependencies": {
     "cropperjs": "^1.4.0",
