@@ -1,24 +1,66 @@
-# NgxImageUploaderNext
+# Angular image-uploader-next
+[![npm version](https://badge.fury.io/js/ngx-image-uploader-next.svg)](https://badge.fury.io/js/ngx-image-uploader-next)
+![Dependencies](https://david-dm.org/ogix/ngx-image-uploader-next.svg)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+This is a fork of [ngx-image-updoader](https://www.npmjs.com/package/ngx-image-uploader).
+Now supports Angular 16.
 
-## Code scaffolding
+Angular image upload component with a preview and cropping features.
 
-Run `ng generate component component-name --project ngx-image-uploader-next` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-image-uploader-next`.
-> Note: Don't forget to add `--project ngx-image-uploader-next` or else it will be added to the default project in your `angular.json` file. 
+### Demo
+See demo here: [demo](https://stackblitz.com/github/ogix/ngx-image-uploader)
 
-## Build
+### Install
+```
+npm install ngx-image-uploader-next --save
+```
+### Usage
 
-Run `ng build ngx-image-uploader-next` to build the project. The build artifacts will be stored in the `dist/` directory.
+Add image uploader module to your module's ```imports```
 
-## Publishing
+```js
+import { NgModule } from '@angular/core';
+import { BrowserModule  } from '@angular/platform-browser';
+import { AppComponent } from './app';
 
-After building your library with `ng build ngx-image-uploader-next`, go to the dist folder `cd dist/ngx-image-uploader-next` and run `npm publish`.
+import { ImageUploaderModule } from 'ngx-image-uploader-next';
 
-## Running unit tests
+@NgModule({
+  imports: [BrowserModule, ImageUploaderModule],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
 
-Run `ng test ngx-image-uploader-next` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Use it in your component
 
-## Further help
+```js
+import { Component } from '@angular/core';
+import { ImageUploaderOptions, FileQueueObject } from 'ngx-image-uploader';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+@Component({
+  selector: 'example-app',
+  template: '<ngx-image-uploader [options]="options" (upload)="onUpload($event)"></ngx-image-uploader>'
+})
+export class AppComponent {
+  options: ImageUploaderOptions = {
+      thumbnailHeight: 150,
+      thumbnailWidth: 150,
+      uploadUrl: 'http://some-server.com/upload',
+      allowedImageTypes: ['image/png', 'image/jpeg'],
+      maxImageSize: 3
+  };
+  
+  onUpload(file: FileQueueObject) {
+    console.log(file.response);
+  }
+}
+
+```
+
+### License
+
+[MIT](https://tldrlegal.com/license/mit-license) © 2020 [Alexey Vladimirov](https://github.com/newvladimirov)
+
+[MIT](https://tldrlegal.com/license/mit-license) © [Olegas Gončarovas](https://github.com/ogix)
