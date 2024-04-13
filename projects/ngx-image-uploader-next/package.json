@@ -1,24 +1,24 @@
 {
-  "name": "ngx-image-uploader-next",
-  "version": "1.1.2",
-  "description": "Angular asynchronous image uploader with preview. Fork of ngx-image-uploader-next.",
-  "keywords": [
-    "angular",
-    "ngx",
-    "img",
-    "image",
-    "uploader"
-  ],
-  "repository": "https://github.com/newvladimirov/ngx-image-uploader",
-  "author": "Alexey Vladimirov newvladimirov@gmail.com",
-  "license": "MIT",
-  "peerDependencies": {
-    "@angular/common": "^16.1.0",
-    "@angular/core": "^16.1.0"
-  },
-  "dependencies": {
-    "tslib": "^2.3.0",
-    "cropperjs": "^1.4.0"
-  },
-  "sideEffects": false
+    "name": "ngx-image-uploader-next",
+    "version": "1.1.6",
+    "description": "Angular asynchronous image uploader with preview. Fork of ngx-image-uploader-next.",
+    "keywords": [
+        "angular",
+        "ngx",
+        "img",
+        "image",
+        "uploader"
+    ],
+    "repository": "https://github.com/newvladimirov/ngx-image-uploader",
+    "author": "Alexey Vladimirov newvladimirov@gmail.com",
+    "license": "MIT",
+    "peerDependencies": {
+        "@angular/common": "^17.0.0",
+        "@angular/core": "^17.0.0"
+    },
+    "dependencies": {
+        "tslib": "^2.3.0",
+        "cropperjs": "^1.4.0"
+    },
+    "sideEffects": false
 }

@@ -1,34 +1,38 @@
 # Angular image-uploader-next
-[![npm version](https://badge.fury.io/js/ngx-image-uploader-next.svg)](https://badge.fury.io/js/ngx-image-uploader-next) 
+
+[![npm version](https://badge.fury.io/js/ngx-image-uploader-next.svg)](https://badge.fury.io/js/ngx-image-uploader-next)
 ![Dependencies](https://david-dm.org/ogix/ngx-image-uploader-next.svg)
 
 This is a fork of [ngx-image-updoader](https://www.npmjs.com/package/ngx-image-uploader).
-Now supports Angular 16.
+Now supports Angular 17.
 
 Angular image upload component with a preview and cropping features.
 
 ### Demo
+
 See demo here: [demo](https://stackblitz.com/github/ogix/ngx-image-uploader)
 
 ### Install
+
 ```
 npm install ngx-image-uploader-next --save
 ```
+
 ### Usage
 
-Add image uploader module to your module's ```imports```
+Add image uploader module to your module's `imports`
 
 ```js
 import { NgModule } from '@angular/core';
-import { BrowserModule  } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app';
 
 import { ImageUploaderModule } from 'ngx-image-uploader-next';
 
 @NgModule({
-  imports: [BrowserModule, ImageUploaderModule],
-  declarations: [AppComponent],
-  bootstrap: [AppComponent]
+    imports: [BrowserModule, ImageUploaderModule],
+    declarations: [AppComponent],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}
 ```
@@ -51,7 +55,7 @@ export class AppComponent {
       allowedImageTypes: ['image/png', 'image/jpeg'],
       maxImageSize: 3
   };
-  
+
   onUpload(file: FileQueueObject) {
     console.log(file.response);
   }
